@@ -18,7 +18,9 @@ def read_fasta(file_path):
             if line.startswith('>'):
                 if sequence_id is not None:
                     sequences[sequence_id] = ''.join(sequence)
-                sequence_id = line[1:].split("|")[2]
+                header = line[1:].strip()
+                parts = header.split("|")
+                sequence_id = parts[2] if len(parts) >= 3 else parts[0]
                 sequence = []
             else:
                 sequence.append(line)
