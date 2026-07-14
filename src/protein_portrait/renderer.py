@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from colors import hydrophobicity_to_color
+from .colors import hydrophobicity_to_color
 import os
 
 
@@ -45,7 +45,10 @@ def render_protein_portrait(properties, title="Protein Portrait", protein="Prote
 
     # draw faint circle for reference
     theta = np.linspace(0, 2 * np.pi, 400)
-    ax.plot
+    ax.plot(np.cos(theta), 
+            np.sin(theta), 
+            color='lightgray', 
+            linewidth=1)
 
     # draw radial petals
     for i in range(num_residues):
