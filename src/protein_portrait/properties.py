@@ -32,4 +32,9 @@ def get_properties(amino_acid):
 
 def sequence_to_properties(sequence):
     """Convert a sequence of amino acids to their properties."""
-    return [get_properties(aa) for aa in sequence if get_properties(aa) is not None]
+    properties = []
+    for aa in sequence:
+        prop = get_properties(aa)
+        if prop is not None:
+            properties.append(prop)
+    return properties
