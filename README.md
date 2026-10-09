@@ -108,7 +108,7 @@ Planned:
 
 ```bash
 
-git clone https://github.com/[your-username]/protein-portrait.git
+git clone https://github.com/elenatoe/protein-portrait.git
 
 cd protein-portrait
 
